@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
 # add Flask HTTP endpoint that outputs 10% and 90% qiantile clients as JSON
 # add SQl database connection and fetch "merged_data" as a single request
-
+# how we can estimate credit risks of such credit portfolio
 
 ############################################################################
 
@@ -39,3 +39,4 @@ marks = [2,2,3,5,2,4,4,3,3,5,2,4,3]
 
 # calc mean, median, std
 # what kind of distribution this can be?
+# sort this list and explain O()-difficulty of algrorithm
