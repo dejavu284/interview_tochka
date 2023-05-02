@@ -3,9 +3,11 @@ import plotly.express as px
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+from flask import Flask
 
-app = dash.Dash(__name__)
-server = app.server
+server = Flask(__name__)
+
+app = dash.Dash(__name__, server=server)
 
 credit_data = pd.read_csv('credit_data.csv')
 client_data = pd.read_csv('client_data.csv')
