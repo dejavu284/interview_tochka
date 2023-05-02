@@ -35,7 +35,7 @@ if __name__ == '__main__':
     app.run_server(debug=True)
 
     
-# add Flask HTTP endpoint that outputs 10% and 90% qiantile clients as JSON
+# add Flask HTTP endpoint that outputs 10% and 90% quantile credit exposure clients as JSON
 # add SQl database connection and fetch "merged_data" as a single request
 # how we can estimate credit risks of such credit portfolio
 
