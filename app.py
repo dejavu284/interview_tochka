@@ -11,19 +11,25 @@ app = dash.Dash(__name__, server=server)
 
 credit_data = pd.read_csv('credit_data.csv')
 client_data = pd.read_csv('client_data.csv')
-
 merged_data = pd.merge(credit_data, client_data, on='client_id', how='left')
-result = merged_data.groupby('client_type').agg({'credit_exposure': 'sum'})
-
-fig = px.bar(result, x=result.index, y='credit_exposure')
 
 app.layout = html.Div(children=[
     html.H1(children='Credit Exposure by Client Type'),
-    dcc.Graph(
-        id='credit-exposure',
-        figure=fig
-    )
+    html.Button('Generate Graph', id='generate-graph-button'),
+    dcc.Graph(id='credit-exposure')
 ])
+
+@app.callback(
+    Output('credit-exposure', 'figure'),
+    Input('generate-graph-button', 'n_clicks')
+)
+def generate_graph(n_clicks):
+    if n_clicks is None:
+        return dash.no_update
+    
+    result = merged_data.groupby('client_type').agg({'credit_exposure': 'sum'})
+    fig = px.bar(result, x=result.index, y='credit_exposure')
+    return fig
 
 if __name__ == '__main__':
     app.run_server(debug=True)
