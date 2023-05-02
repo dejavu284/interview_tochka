@@ -27,3 +27,15 @@ app.layout = html.Div(children=[
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
+    
+# add Flask HTTP endpoint that outputs 10% and 90% qiantile clients as JSON
+# add SQl database connection and fetch "merged_data" as a single request
+
+
+############################################################################
+
+marks = [2,2,3,5,2,4,4,3,3,5,2,4,3]
+
+# calc mean, median, std
+# what kind of distribution this can be?
