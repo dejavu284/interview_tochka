@@ -30,21 +30,25 @@ app.layout = html.Div(children=[
     Output('credit-exposure', 'figure'),
     Input('generate-graph-button', 'n_clicks')
 )
-def generate_graph(n_clicks):
+def generate_graph_credit_amount_by_type(n_clicks):
     if n_clicks is None:
         return dash.no_update
     
-    result = merged_data.groupby('client_type').agg({'credit_exposure': 'sum'})
+    result = 
+#############################################################
+# Task 2
+# Output sum of credit by type of client
+#############################################################
     fig = px.bar(result, x=result.index, y='credit_exposure')
     return fig
 
 #############################################################
-# Task 2
+# Task 3
 # Add Flask HTTP endpoint that outputs 10% and 90% quantile credit exposure clients as JSON
 #############################################################
 
 #############################################################
-# Task 3
+# Task 4
 # How we can estimate credit risks of such credit portfolio
 #############################################################
 
@@ -62,18 +66,18 @@ if __name__ == '__main__':
 marks = [2,2,3,4,2,4,2,4,3,2,3,5,2,4,3,2,2,2,3,3,2,4]
 
 #############################################################
-# Task 4
+# Task 5
 # Calculate mean, median, std
 #############################################################
 
 #############################################################
-# Task 5
+# Task 6
 # What kind of distribution this can be? 
 # What are fat-tail distributions and how can measure the "tail"?
 #############################################################
 
 #############################################################
-# Task 6
+# Task 7
 # Sort this list and explain O()-difficulty of algrorithm
 #############################################################
 
