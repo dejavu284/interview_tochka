@@ -17,7 +17,7 @@ merged_data = pd.merge(credit_data, client_data, on='client_id', how='left')
 
 #############################################################
 # Task 1 
-# add SQl database connection and rewrite lines above to fetch "merged_data" as a SQL single request
+# Add SQl database connection and rewrite lines above to fetch "merged_data" as a SQL single request
 #############################################################
 
 app.layout = html.Div(children=[
@@ -40,12 +40,12 @@ def generate_graph(n_clicks):
 
 #############################################################
 # Task 2
-# add Flask HTTP endpoint that outputs 10% and 90% quantile credit exposure clients as JSON
+# Add Flask HTTP endpoint that outputs 10% and 90% quantile credit exposure clients as JSON
 #############################################################
 
 #############################################################
 # Task 3
-# how we can estimate credit risks of such credit portfolio
+# How we can estimate credit risks of such credit portfolio
 #############################################################
 
 if __name__ == '__main__':
@@ -56,24 +56,24 @@ if __name__ == '__main__':
 ############################################################################
 ############################################################################
 
-# you are given a list of student's grades ranging from 2 to 5. 
+# You are given a list of student's grades ranging from 2 to 5. 
 # Grades can only be natural number from 2 to 5
 
 marks = [2,2,3,4,2,4,2,4,3,2,3,5,2,4,3,2,2,2,3,3,2,4]
 
 #############################################################
 # Task 4
-# calculate mean, median, std
+# Calculate mean, median, std
 #############################################################
 
 #############################################################
 # Task 5
-# what kind of distribution this can be? 
-# what are fat-tail distributions and how can measure the "tail"?
+# What kind of distribution this can be? 
+# What are fat-tail distributions and how can measure the "tail"?
 #############################################################
 
 #############################################################
 # Task 6
-# sort this list and explain O()-difficulty of algrorithm
+# Sort this list and explain O()-difficulty of algrorithm
 #############################################################
 
