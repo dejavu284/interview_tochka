@@ -36,6 +36,26 @@ merged_data = pd.merge(credit_data, client_data, on='client_id', how='left')
 # +----+-----------+------------+--------+     +-----------+-------------+
 #############################################################
 
+#############################################################
+# Task 2.1
+# Write SQL query to find max credit exposure for client_id's
+# which has been updated after 25.12.2022 and enumerate this df by updated col
+# to make this transformation
+# +----+-----------+------------+-----------------+
+# | id | client_id | updated    | credit_exposure |
+# +----+-----------+------------+-----------------+
+# | 1  | 1         | 21.12.2022 | 192             |     +-----------+-------------+----------+
+# | 2  | 1         | 22.12.2022 | 446             |     | client_id | max_exposure | row_num |
+# | 3  | 1         | 25.12.2022 | 854             |  => +-----------+-------------+----------+
+# | 4  | 2         | 27.12.2022 | 879             |     | 1         | 879          | 1       |
+# | 5  | 3         | 27.12.2022 | 397             |     | 2         | 397          | 2       |
+# | 6  | 3         | 29.12.2022 | 245             |     | 3         | 477          | 3       |
+# | 7  | 4         | 29.12.2022 | 477             |     +-----------+-------------+----------+
+# +----+-----------+------------+-----------------+
+#############################################################
+
+#############################################################
+
 app.layout = html.Div(children=[
     html.H1(children='Credit Exposure by Client Type'),
     html.Button('Generate Graph', id='generate-graph-button'),
@@ -112,4 +132,39 @@ marks = [2,2,3,4,2,4,2,4,3,2,3,5,2,4,3,2,2,2,3,3,2,4]
 #############################################################
 # Task 11
 # How are you going to push this to git? (hint: create a new branch)
+#############################################################
+
+#############################################################
+# Task 12
+# You are given two matrix
+# Define a function to multiply this matrix
+# Add constrains if any
+matrix_a = [
+    [4, 9, 9],
+    [9, 1, 6],
+    [9, 2, 3]
+]
+
+matrix_b = [
+    [2, 2],
+    [5, 7],
+    [4, 4],
+]
+
+def multiply_matrix(
+        matrix_0: list,
+        matrix_1: list
+) -> array:
+
+    matrix_res
+
+    return matrix_res
+
+result = multiply_matrix(matrix_a, matrix_b)
+# expected answer
+# [
+#   [89, 107],
+#   [47, 49],
+#   [40, 44],
+# ]
 #############################################################
